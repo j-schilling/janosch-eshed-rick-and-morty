@@ -1,4 +1,4 @@
-import { fetchData } from "../../index.js";
+import { fetchCharacters } from "../../index.js";
 
 export function createCharacterCard(
   name,
