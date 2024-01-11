@@ -1,12 +1,10 @@
 .card-container {
-  margin-bottom: 35px;
+  margin-bottom: 60px;
 }
 .card {
   width: 350px;
   background-color: var(--color-btight-blue);
   border-radius: 15px;
-
-
 }
 
 .card__info {
@@ -31,7 +29,7 @@ li {
   list-style: none;
 }
 
-.card__image{
+.card__image {
   padding: 10px;
   display: block;
   margin-left: auto;

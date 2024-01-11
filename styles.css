@@ -2,7 +2,7 @@
 @import "components/search-bar/search-bar.css";
 @import "components/nav-button/nav-button.css";
 @import "components/nav-pagination/nav-pagination.css";
-@import "./css/background.css";
+@import "./css/header.css";
 @import "./css/cards.css";
 
 * {
@@ -17,7 +17,7 @@
   --font-family: system-ui;
   --color-dark: black;
   --color-btight-blue: hsl(183, 40%, 46%);
-  --color-primary2 : rgb(127, 126, 126);
+  --color-primary2: rgb(127, 126, 126);
 }
 
 body {
@@ -41,5 +41,3 @@ main {
 /* .title {
   padding: 10px 0;
 } */
-
-
