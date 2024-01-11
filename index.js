@@ -15,7 +15,7 @@ const navigation = document.querySelector('[data-js="navigation"]');
 // States
 let maxPage = 1;
 let page = 1;
-const searchQuery = "";
+let searchQuery = "";
 
 const prevButton = createButton("Previous", () => {
   if (page > 1) {
