@@ -2,19 +2,20 @@
 
 .navigation {
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   padding: 20px;
-  height: 30px;
+  height: fit-content;
   /* display: grid;
   grid-template-columns: 100px 100px 100px; */
   display: flex;
   flex-direction: row;
   width: 100vw;
   justify-content: space-evenly;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary2);
+  opacity: 70%;
 }
 
 .navigation__pagination {
   /* display: grid; */
-  /* place-items: center; */
+  place-items: center;
 }

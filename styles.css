@@ -9,7 +9,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
 }
 
 :root {
@@ -18,19 +17,18 @@
   --font-family: system-ui;
   --color-dark: black;
   --color-btight-blue: hsl(183, 40%, 46%);
+  --light-background: hsl(345, 93%, 79%);
 }
 
 body {
-  background-image: url('./assets/galaxy1.jpg');
+  background-image: url("./assets/galaxy1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
   height: 100vh;
-  margin: 0;
+  margin: 0px;
   font-family: var(--font-family);
   color: var(--color-dark);
-  padding: 20px;
-
 }
 
 main {
@@ -42,5 +40,4 @@ main {
 
 .title {
   padding: 10px 0;
-  
 }

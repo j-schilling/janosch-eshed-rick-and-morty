@@ -1,7 +1,14 @@
 .button {
-  border: none;
+  border: 0px;
+  height: fit-content;
+  /* border-color: none; */
+  margin-bottom: 40px;
+  background-color: blueviolet;
+  color: white;
+  padding: 5px;
+  margin: 5px;
 }
 
 .button:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--light-background);
 }
