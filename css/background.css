@@ -6,8 +6,17 @@
 
 
 .title1 {
-  display: flex;
-  align-items: center;
-  width: 50%;
+
+  background-color: var(--color-primary2);
+  position: fixed;
+  top: 0;
+  justify-content:center;
   height: auto;
+  margin: 0;
+  display: flex;
+
+  width:20%;
+  opacity: 70%;
+
+  justify-content: space-evenly;
 }
