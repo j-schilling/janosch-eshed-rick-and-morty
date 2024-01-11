@@ -1,21 +1,29 @@
 import { createCharacterCard } from "./components/card/card.js";
 import { createButton } from "./components/nav-button/nav-button.js";
 import { createPagination } from "./components/nav-pagination/nav-pagination.js";
+import { createSearchBar } from "./components/search-bar/search-bar.js";
 
 const cardContainer = document.querySelector('[data-js="card-container"]');
 const searchBarContainer = document.querySelector(
   '[data-js="search-bar-container"]'
 );
-const searchBar = document.querySelector('[data-js="search-bar"]');
+// const searchBar = document.querySelector('[data-js="search-bar"]');
 const navigation = document.querySelector('[data-js="navigation"]');
 // const prevButton = document.querySelector('[data-js="button-prev"]');
 // const nextButton = document.querySelector('[data-js="button-next"]');
 // const pagination = document.querySelector('[data-js="pagination"]');
 
-// States
 let maxPage = 1;
 let page = 1;
 let searchQuery = "";
+
+const searchBar = createSearchBar((e) => {
+  e.preventDefault();
+  page = 1;
+  searchQuery = e.target.query.value;
+  console.log("searchQuery: ", searchQuery);
+  fetchCharacters();
+});
 
 const prevButton = createButton("Previous", () => {
   if (page > 1) {
@@ -52,7 +60,7 @@ export async function fetchCharacters() {
       character.type,
       character.episode.length
     );
-
+    searchBarContainer.append(searchBar);
     cardContainer.append(createCard);
     maxPage = data.info.pages;
     console.log("maxPage: ", maxPage);
@@ -65,28 +73,3 @@ export async function fetchCharacters() {
 }
 
 fetchCharacters();
-
-// nextButton.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   if (page < maxPage) {
-//     page = page + 1;
-//     fetchCharacters();
-//     console.log("Youre on page: ", page);
-//   }
-// });
-// prevButton.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   if (page > 1) {
-//     page = page - 1;
-//     fetchCharacters();
-//     console.log("Youre on page: ", page);
-//   }
-// });
-
-searchBar.addEventListener("submit", (e) => {
-  e.preventDefault();
-  page = 1;
-  searchQuery = e.target.query.value;
-  console.log("searchQuery: ", searchQuery);
-  fetchCharacters();
-});
