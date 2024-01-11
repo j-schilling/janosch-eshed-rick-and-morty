@@ -1,10 +1,16 @@
 .search-bar-container {
   width: 300px;
+
 }
 
+::placeholder {
+  color: rgb(221, 209, 209);
+}
 .search-bar {
+  background-color: var(--color-primary2);
+  opacity: 70%;
   padding: 10px 20px;
-  background-color: var(--color-secondary);
+
   display: grid;
   grid-template-columns: 1fr 24px;
 }
@@ -12,15 +18,17 @@
 .search-bar__input {
   background-color: transparent;
   border: none;
-  color: var(--color-primary);
+  color: var(--color-dark);
 }
 
 .search-bar__button {
+
   border: none;
   background-color: transparent;
 }
 
 .search-bar__input:focus {
+
   outline: none;
 }
 

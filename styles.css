@@ -18,6 +18,7 @@
   --font-family: system-ui;
   --color-dark: black;
   --color-btight-blue: hsl(183, 40%, 46%);
+  --color-primary2 : rgb(127, 126, 126);
 }
 
 body {
@@ -40,7 +41,7 @@ main {
   gap: 10px;
 }
 
-.title {
+/* .title {
   padding: 10px 0;
-  
-}
+
+} */
