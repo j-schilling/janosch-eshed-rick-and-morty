@@ -1,10 +1,20 @@
+@import "../../styles.css";
+
 .navigation {
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
   height: 30px;
-  display: grid;
-  grid-template-columns: 100px 100px 100px;
+  /* display: grid;
+  grid-template-columns: 100px 100px 100px; */
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-evenly;
+  background-color: var(--color-secondary);
 }
 
 .navigation__pagination {
-  display: grid;
-  place-items: center;
+  /* display: grid; */
+  /* place-items: center; */
 }

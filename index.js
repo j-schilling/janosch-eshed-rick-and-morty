@@ -27,14 +27,14 @@ const searchBar = createSearchBar((e) => {
 
 const prevButton = createButton("Previous", () => {
   if (page > 1) {
-    page = page - 1;
+    page--;
     fetchCharacters();
   }
 });
 
 const nextButton = createButton("Next", () => {
   if (page < maxPage) {
-    page = page + 1;
+    page++;
     fetchCharacters();
   }
 });
