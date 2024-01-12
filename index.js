@@ -75,8 +75,7 @@ export async function fetchCharacters() {
     console.error("An error occurred");
     const addErrorElement = document.createElement("div");
     addErrorElement.classList.add("error");
-    addErrorElement.innerText = `Ooooops, something went wrong :(
-      Please reload the page or try again later.`;
+    addErrorElement.innerText = `There is no such character. Please try again. :)`;
     searchBarContainer.append(addErrorElement);
   }
 }

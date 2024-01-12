@@ -3,7 +3,6 @@
 @import "components/nav-button/nav-button.css";
 @import "components/nav-pagination/nav-pagination.css";
 @import "./css/header.css";
-@import "./css/cards.css";
 
 * {
   box-sizing: border-box;
