@@ -25,14 +25,14 @@ const searchBar = createSearchBar((e) => {
   fetchCharacters();
 });
 
-const prevButton = createButton("< Previous Page", () => {
+const prevButton = createButton("< Previous page", () => {
   if (page > 1) {
     page--;
     fetchCharacters();
   }
 });
 
-const nextButton = createButton("Next Page >", () => {
+const nextButton = createButton("Next page >", () => {
   if (page < maxPage) {
     page++;
     fetchCharacters();
