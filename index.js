@@ -42,34 +42,43 @@ const nextButton = createButton("Next page >", () => {
 const pagination = createPagination(page, maxPage);
 
 export async function fetchCharacters() {
-  cardContainer.innerHTML = "";
+  try {
+    cardContainer.innerHTML = "";
 
-  let url = `https://rickandmortyapi.com/api/character?page=${page}&name=${searchQuery}`;
-  console.log("url: ", url);
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log("data: ", data);
-  const characters = data.results;
-  console.log("characters: ", characters);
+    let url = `https://rickandmortyapi.com/api/character?page=${page}&name=${searchQuery}`;
+    console.log("url: ", url);
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log("data: ", data);
+    const characters = data.results;
+    console.log("characters: ", characters);
 
-  characters.forEach((character) => {
-    const createCard = createCharacterCard(
-      character.name,
-      character.image,
-      character.status,
-      character.type,
-      character.episode.length
-    );
-    searchBarContainer.append(searchBar);
-    cardContainer.append(createCard);
-    maxPage = data.info.pages;
-    console.log("maxPage: ", maxPage);
-    pagination.innerText = `${page} / ${maxPage}`;
+    characters.forEach((character) => {
+      const createCard = createCharacterCard(
+        character.name,
+        character.image,
+        character.status,
+        character.type,
+        character.episode.length
+      );
+      searchBarContainer.append(searchBar);
+      cardContainer.append(createCard);
+      maxPage = data.info.pages;
+      console.log("maxPage: ", maxPage);
+      pagination.innerText = `${page} / ${maxPage}`;
 
-    navigation.append(prevButton);
-    navigation.append(pagination);
-    navigation.append(nextButton);
-  });
+      navigation.append(prevButton);
+      navigation.append(pagination);
+      navigation.append(nextButton);
+    });
+  } catch (error) {
+    console.error("An error occurred");
+    const addErrorElement = document.createElement("div");
+    addErrorElement.classList.add("error");
+    addErrorElement.innerText = `Ooooops, something went wrong :(
+      Please reload the page or try again later.`;
+    searchBarContainer.append(addErrorElement);
+  }
 }
 
 fetchCharacters();
