@@ -38,6 +38,12 @@ main {
   gap: 10px;
 }
 
+.error {
+  color: var(--color-secondary);
+  font-size: 2rem;
+  margin: 20px;
+}
+
 /* .title {
   padding: 10px 0;
 } */
